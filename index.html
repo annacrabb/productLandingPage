@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Dice</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- 1. Your product landing page should have a header element with a corresponding id="header"
+2. You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
+3. Within the #header element, you can see a nav element with a corresponding id="nav-bar"
+4. You can see at least three clickable elements inside the nav element, each with the class nav-link
+5. When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+6. You can watch an embedded product video with id="video"
+7. Your landing page has a form element with a corresponding id="form"
+8. Within the form, there is an input field with id="email" where you can enter an email address
+9. The #email input field should have placeholder text to let users know what the field is for
+10. The #email input field uses HTML5 validation to confirm that the entered text is an email address
+11. Within the form, there is a submit input with a corresponding id="submit"
+12. When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+13. The navbar should always be at the top of the viewport
+14. Your product landing page should have at least one media query
+15. Your product landing page should utilize CSS flexbox at least once -->
+
+    <!-- Header -->
+    <header id="header">
+        <img id="header-img" src="./assets/diceheaderpic.jpg" alt="d20 header">
+        <div class="rollfordiscount">
+            <h1>Roll for Discount</h1>
+        </div>
+
+        <nav id="nav-bar">
+            <ul>
+                <li><nav-link class="nav-link"><a href="#dice">Dice</a></nav-link></li>
+                <li><nav-link class="nav-link"><a href="#dicebags">Dice Bags</a></nav-link></li>
+                <li><nav-link class="nav-link"><a href="#form">Subscribe</a></nav-link></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Intro -->
+    <main>
+        <h3>A set of dice for every campaign</h3>
+        <p>Most people think that dice are dice. They think that dice sets somehow interchangable and it doesn't really
+            matter which set you use. Seasoned DnD players knows, however, that the right set of dice can make all the
+            difference. Maybe your favorite D20 hasn't rolled anything over a 10 for the last two sessions. Maybe your
+            level 10 barbarian has damage dice that just... aren't doing enough damage.</p>
+        <p>That's where we come in. You need a specific set of dice for <strong>every</strong> occasion. Scroll through
+            our selection to find the perfect set of dice to end your run of bad rolls and <em>show up</em> for your
+            campaign like you never have before. We'll even throw in a groovy dice bag so you never lose them.</p>
+
+        <!-- Videos -->
+        <div id="video">
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GH9ufmzlcoc?si=B0GFwC_iunwuPSLt"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KM_EnKRUE5U?si=VAJajL_f3z7GglYP"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Shop - Dice -->
+        <div id="dice">
+            <h2>Dice</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde a, explicabo sequi placeat aliquid aliquam
+                reiciendis nostrum rerum omnis incidunt necessitatibus nemo ullam laudantium facere corporis atque
+                distinctio illo! Repudiandae?</p>
+        </div>
+        <div class="dice-container">
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1625173925005-0043774fe954?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVuZ2VvbnMlMjBhbmQlMjBkcmFnb25zJTIwZGljZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="green dice set"></div>
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1650024520012-79a3abf48462?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGR1bmdlb25zJTIwYW5kJTIwZHJhZ29ucyUyMGRpY2V8ZW58MHx8MHx8fDA%3D"
+                    alt="turquoise dice set"></div>
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1650024520226-b63a33baff60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGR1bmdlb25zJTIwYW5kJTIwZHJhZ29ucyUyMGRpY2V8ZW58MHx8MHx8fDA%3D"
+                    alt="rust dice set"></div>
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1696197819145-dbcf7e97cbdc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGR1bmdlb25zJTIwYW5kJTIwZHJhZ29ucyUyMGRpY2V8ZW58MHx8MHx8fDA%3D"
+                    alt="translucent dice set"></div>
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1662072628491-c06d228ae18c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGR1bmdlb25zJTIwYW5kJTIwZHJhZ29ucyUyMGRpY2V8ZW58MHx8MHx8fDA%3D"
+                    alt="multicolor dice set"></div>
+            <div class="dice-photos"><img
+                    src="https://images.unsplash.com/photo-1564379874483-3891e8f36a24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGR1bmdlb25zJTIwYW5kJTIwZHJhZ29ucyUyMGRpY2V8ZW58MHx8MHx8fDA%3D"
+                    alt="reflected dice set"></div>
+
+
+        </div>
+
+        <!-- Browse - Dice bags-->
+        <div id="dicebags">
+            <h2>Dice Bags</h2>
+            <p>Our eco-friendly dice bags are all sourced from previously used & sanitized bags from various sources. In
+                order to cut our costs & pass savings onto you, one of our associates will handpick and include a bag
+                from our currect selection that matches the vibe of your chosen set of dice.</p>
+            <p>Take a look through the photos below to get a feel for the kind of bags we offer. If you do not need a free
+                bag along with your dice set, you can indicate that during checkout.</p>
+        </div>
+
+            <div class="bag-container">
+                <div class="bag-photos"><img src="https://media.istockphoto.com/id/1160796848/id/foto/tas-drawstring-terisolasi-pada-latar-belakang-putih-tas-drawstring-kecil-tua-terisolasi.jpg?s=612x612&w=0&k=20&c=JOLXQycO44Wo0jacMwuqyZ-dQaX1Uz-rI6MZyt4qPBg=" alt="khaki dice bag"></div>
+                <div class="bag-photos"><img src="https://media.istockphoto.com/id/477079825/id/foto/tas-beludru-merah-terisolasi-di-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=DIrTxeRxAZH_0Mk_YjfrSLYdNHQlYa80ixFOueKwERE=" alt="red dice bag"></div>
+                <div class="bag-photos"><img src="https://media.istockphoto.com/id/1354889982/id/foto/kantong-tas-perhiasan-hitam-diisolasi-di-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=LvMyvcLRiHX_wT8gn_H0kAM4L-RJMSTOfjLslaUmNlE=" alt="black dice bag"></div>
+            </div>
+
+
+        <!-- Contact -->
+        <!-- Question - where to put the website where form should submit to? When I put it in the <form action ="#" it just opens that website -->
+        <div class="form">
+            <form action="#" id="form">
+                <label for="form">Subscribe for up to 20% off your first purchase!</label>
+                <input type="email" id="submit" class="form-control" placeholder="Enter email and roll for discount" required>
+                <button type="submit" class="button"><i class="fa-solid fa-dice-d20"></i> Roll for Discount <i class="fa-solid fa-dice-d20"></i></button>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
