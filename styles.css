@@ -1,43 +1,33 @@
+body {
+  background-color: beige;
+}
 
-/* resize header image, make it relative so that the title can live in it */
-#header-img{
-  width: auto;
+/* resize header image */
+header img {
+  height: auto;
   max-width: 100%;
-  position: relative;
 }
 
-/* align title within header image */
-#header .rollfordiscount{
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
-}
 /* style title */
-h1{
-color: beige;
-font-size: 100px;
-font-family: arial;
-}
-
-/* style subtitle, align at end */
-h3{
-  font-style: italic;
-  text-align: end;
+h1 {
+  color: black;
+  font-size: 80px;
+  font-family: arial;
 }
 
 
-/* style navbar, apply sticky position */
+/* style navbar, apply fixed position at top of screen */
 #nav-bar {
   background: orangered;
-  /* padding: 0; */
-  position: sticky;
-  top: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* style navbar list, make flex display so that they can be aligned on the same row, margin is 0 top and bottom with auto right and left */
 nav ul {
   list-style-type: none;
-  /* padding: 0; */
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
@@ -55,10 +45,7 @@ nav li a {
 
 /* underline links when user hovers */
 nav a:hover {
-  /* background-color: lightgray; */
   text-decoration: underline;
-  /* font-weight: bold; */
-  /* color: white; */
 }
 
 /* style paragraphs */
@@ -67,45 +54,60 @@ p {
   box-shadow: 5px 10px hsla(16, 100%, 50%, 0.445);
   margin: 2em;
   padding: 1.5em;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  background-color: white;
 }
 
-/* make container with videos a flex container, arrange content inside JUSTIFY CONTENT ISN'T DOING THE THING */
-#video{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-/* do something to make the items flex with container? */
-.video-item{
-  flex: 50%;
+#pricing ul{
+  border: lightgray solid 1px;
+  box-shadow: 5px 10px hsla(16, 100%, 50%, 0.445);
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 1.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  background-color: white;
+  list-style: none;
 }
 
-/* make dice container a flex container, wrap, arrange content within */
-.dice-container{
+#pricing li{
+  text-align: center;
+  text-decoration: none;
+}
+
+/* make container with videos a flex container, arrange content inside */
+#video {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-/* put margin in top/bottom dice photos, resize */
-.dice-photos{
+/* make dice container a flex container, wrap, arrange content within */
+.dice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* put margin around dice photos, resize */
+.dice-photos img {
   margin: 2em 2em;
   height: auto;
-  /* width: 400px; */
-  /* border:  hsla(16, 100%, 50%, 0.445) solid 2px; */
+  width: 300px;
 }
 
 /* make bag container a flex container, wrap, arrange content */
-.bag-container{
+.bag-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.bag-photos{
-  width: 25%;
+/* resize dice bag images, add margin */
+.bag-photos img {
+  height: 300px;
+  margin: 2em 2em;
 }
 
 /* make form a flex container - column, add style */
@@ -115,33 +117,68 @@ p {
   align-items: center;
   background-color: hsla(16, 100%, 50%, 0.445);
   padding: 1.5em;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
-input{
+input {
   width: 30%;
   padding: 10px 15px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: orangered solid 1px;
   border-radius: 4px;
 }
 
-input:focus{
-outline: none;
+input:focus {
+  outline: none;
 }
 
-label{
+label {
   margin: .5em;
 }
 
-.button{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: .5em;
 }
 
-/* media queries - change heading font size? change size of photos? hide videos? */
+/* media queries - make fonts and photos smaller in screens smaller than 768px*/
 
-@media (max-width: 540px){
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
 
+  #header {
+    position: static;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  #pricing li{
+    font-size: small;
+    
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .dice-photos img {
+    width: 250px;
+  }
+  
+  .bag-photos img {
+    height: 250px;
+  }
+  
+  .video-item iframe{
+    width: auto;
+  }
 }
