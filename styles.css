@@ -162,8 +162,7 @@ label {
   }
 
   #pricing li{
-    font-size: small;
-    
+    font-size: 10px;
   }
 
   h3 {
@@ -180,5 +179,9 @@ label {
   
   .video-item iframe{
     width: auto;
+  }
+
+  #nav-bar{
+
   }
 }
